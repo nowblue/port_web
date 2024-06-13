@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* background-color: #f0f0f0; */
+        }
+
+        /* 
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        } */
+
+        main {
+            padding-top: 10vw;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-bottom: 5vw;
+            font-size: 2.5rem;
+        }
+
+        .image-container {
+            position: relative;
+            margin-bottom: 40px;
+            text-align: center;
+            overflow: hidden;
+            /* 텍스트 애니메이션용 */
+        }
+
+        .image-container img {
+            width: 40vw;
+            /* 이미지 크기 조정 */
+            /* border: 3px solid rgb(127, 127, 127); */
+            margin: 20px;
+            transition: transform 0.3s ease-in-out;
+            /* 이미지 변화 애니메이션 */
+        }
+
+        .image-container .text-overlay {
+            position: absolute;
+            top: 0;
+            right: -100%;
+            /* 초기에 텍스트를 화면 밖으로 이동 */
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            text-align: left;
+            transition: transform 0.5s ease-in-out, right 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+
+        .image-container:hover img {
+            transform: translateX(-20px);
+            /* 호버 시 이미지를 왼쪽으로 이동 */
+        }
+
+        .image-container:hover .text-overlay {
+            right: 0;
+            /* 호버 시 텍스트가 오른쪽에서 나타남 */
+            transform: translateX(0);
+        }
+
+        .text-overlay {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-overlay p {
+            margin-left: 2vw;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #333;
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+    <title>이미지 호버 애니메이션</title>
+</head>
+
+
+<body>
+
+    <div class="wrap">
+        <nav>
+            <ul>
+                <li><a href="../profile.html" class="nav-li">PROFILE</a></li>
+                <li><a href="../design.html" class="nav-li">DESIGN</a></li>
+                <li><a href="../motion.html" class="nav-li">MOTION</a></li>
+                <li><a href="../draw.html" class="nav-li">DRAW</a></li>
+                <li><a href="../gallery.html" class="nav-li">GALLERY</a></li>
+            </ul>
+
+            <a href="../index.html"><img src="../../img/logo.png" alt="" class="logo"></a>
+        </nav>
+
+        <main>
+            <h1>자유 드로잉</h1>
+
+            <section class="image-container">
+                <img src="../../img/4.jpg" alt="">
+                <div class="text-overlay">
+                    <p>
+                        언니가 선물해준 단종된 카메라와<br />
+                        가을에 타는 자전거,<br />
+                        한 쪽 눈을 감고 보는 햇빛.<br />
+                        좋아하는 것을 가득 담았다.
+                    </p>
+                </div>
+            </section>
+
+            <div class="image-container">
+                <img src="../../img/5.jpg" alt="">
+                <div class="text-overlay">
+                    <p>
+                        가장 최근에 그린 그림.<br />
+                        색상 그림은 정교함이 몇 배는 더 요구되기 때문에<br />
+                        흑백 그림을 선호하는데<br />
+                        오랜만에 매혹적인 남자아이가 그리고 싶었달까...
+                    </p>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img src="../../img/9.jpg" alt="">
+                <div class="text-overlay">
+                    <p>
+                        정말 재미있게 보던 애니메이션인데,<br />
+                        내가 이 캐릭터에 한동안 빠져있던 시절이 있었다.<br />
+                        이렇게 그림까지 그릴 정도로 좋아했다.
+                    </p>
+                </div>
+            </div>
+
+        </main>
+
+
+        <footer>
+            <section class="footer">
+                <section class="footer-left">
+                    <article>
+                        <img src="../img/logo.png" alt="" class="footer-logo">
+                    </article>
+                    <p class="footer-text">
+                        ©Song Haim ALL RIGHTS RESERVED.
+                    </p>
+                </section>
+    
+                <section class="footer-right">
+                    <div class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">GITHUB</p>
+                            <p class="footer-sub2"><a href="https://github.com/nowblue/hr_wp.git">nowblue</a></p>
+                        </div>
+    
+                        <p class="footer-sub3">이용 약관</p>
+                    </div>
+                    <section class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">E-mail</p>
+                            <a href="mailto:season460@kaywon.ac.kr" class="mailto">
+                                <p class="footer-sub2">season460@kaywon.ac.kr</p>
+                            </a>
+                        </div>
+    
+                        <p class="footer-sub3">도움말</p>
+                    </section>
+                    <section class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">SNS</p>
+                            <p class="footer-sub2"><a href="https://blog.naver.com/oo0n_">Blog</a></p>
+                        </div>
+    
+                        <p class="footer-sub3">개인정보 처리방침</p>
+                    </section>
+                </section>
+            </section>
+        </footer>
+    </div>
+</body>
+
+</html>

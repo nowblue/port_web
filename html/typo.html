@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <style>
+        main {
+            padding-top: 70px;
+            /* Adjust to give space for the fixed nav */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            display: flex;
+            padding-top: 4vw;
+            width: 80vw;
+            /* height: 200px; */
+            background-color: #ececec;
+            border-radius: 10px;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0 0 0;
+            transition: transform 1s ease-out, opacity 1s ease-out;
+            opacity: 0;
+            transform: translateY(200vw);
+        }
+
+        .card img {
+            width: 100px;
+            /* border-radius: 50%; */
+        }
+
+        .card p {
+            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        /* Animation when section comes into view */
+        .section-animate.visible .card {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        video {
+            width: 60vw;
+            margin-top: 2vw;
+            margin-bottom: 5vw;
+        }
+
+        h1 {
+            font-size: 3vw;
+            margin-bottom: 0.5vw;
+        }
+
+        h2 {
+            margin-bottom: 1.5vw;
+            font-size: 1.8vw;
+        }
+
+
+        .slider-container {
+            position: relative;
+            max-width: 60vw;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 5vw;
+        }
+
+        .slide-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+
+        .slide img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            z-index: 1;
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <nav>
+            <ul>
+                <li><a href="./profile.html" class="nav-li">PROFILE</a></li>
+                <li><a href="./design.html" class="nav-li">DESIGN</a></li>
+                <li><a href="./motion.html" class="nav-li">MOTION</a></li>
+                <li><a href="./draw.html" class="nav-li">DRAW</a></li>
+                <li><a href="./gallery.html" class="nav-li">GALLERY</a></li>
+            </ul>
+
+            <a href="./index.html"><img src="../img/logo.png" alt="" class="logo"></a>
+        </nav>
+        <main>
+            <section class="section-animate">
+                <section class="card">
+                    <h1>TypoGraphic</h1>
+                    <h2>Benson boone - Ghost Town</h2>
+                    <video src="../img/typo.mp4" controls></video>
+
+
+                    <article>
+                        <h2>Archive</h2>
+                        <div class="slider-container">
+                            <div class="slide-track">
+                                <div class="slide">
+                                    <img src="../img/typo1_페이지_01.jpg" alt="Image 1">
+                                </div>
+                                <div class="slide">
+                                    <img src="../img/typo1_페이지_02.jpg" alt="Image 2">
+                                </div>
+                                <div class="slide">
+                                    <img src="../img/typo1_페이지_03.jpg" alt="Image 3">
+                                </div>
+                                <div class="slide">
+                                    <img src="../img/typo1_페이지_04.jpg" alt="Image 4">
+                                </div>
+                                <div class="slide">
+                                    <img src="../img/typo1_페이지_05.jpg" alt="Image 5">
+                                </div>
+                                <div class="slide">
+                                    <img src="../img/typo1_페이지_06.jpg" alt="Image 6">
+                                </div>
+                                <div class="slide">
+                                    <img src="../img/typo1_페이지_07.jpg" alt="Image 7">
+                                </div>
+                                <div class="slide">
+                                    <img src="../img/typo1_페이지_08.jpg" alt="Image 8">
+                                </div>
+                                <div class="slide">
+                                    <img src="../img/typo1_페이지_09.jpg" alt="Image 9">
+                                </div>
+                                <div class="slide">
+                                    <img src="../img/typo1_페이지_10.jpg" alt="Image 10">
+                                </div>
+                                <div class="slide">
+                                    <img src="../img/typo1_페이지_11.jpg" alt="Image 11">
+                                </div>
+                            </div>
+
+                            <button class="slide-btn prev-btn">&lt;</button>
+                            <button class="slide-btn next-btn">&gt;</button>
+                        </div>
+                    </article>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <section class="footer">
+                <section class="footer-left">
+                    <article>
+                        <img src="../img/logo.png" alt="" class="footer-logo">
+                    </article>
+                    <p class="footer-text">
+                        ©Song Haim ALL RIGHTS RESERVED.
+                    </p>
+                </section>
+
+                <section class="footer-right">
+                    <div class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">GITHUB</p>
+                            <p class="footer-sub2"><a href="https://github.com/nowblue/hr_wp.git">nowblue</a></p>
+                        </div>
+
+                        <p class="footer-sub3">이용 약관</p>
+                    </div>
+                    <section class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">E-mail</p>
+                            <a href="mailto:season460@kaywon.ac.kr" class="mailto">
+                                <p class="footer-sub2">season460@kaywon.ac.kr</p>
+                            </a>
+                        </div>
+
+                        <p class="footer-sub3">도움말</p>
+                    </section>
+                    <section class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">SNS</p>
+                            <p class="footer-sub2"><a href="https://blog.naver.com/oo0n_">Blog</a></p>
+                        </div>
+
+                        <p class="footer-sub3">개인정보 처리방침</p>
+                    </section>
+                </section>
+            </section>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const section = document.querySelector('.section-animate');
+
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.1 // Adjust this threshold as needed
+                };
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                        }
+                    });
+                }, observerOptions);
+
+                observer.observe(section);
+
+
+
+
+
+                const track = document.querySelector('.slide-track');
+                const slides = document.querySelectorAll('.slide');
+                const prevBtn = document.querySelector('.prev-btn');
+                const nextBtn = document.querySelector('.next-btn');
+
+                // 현재 슬라이드의 인덱스
+                let currentIndex = 0;
+                // 슬라이드 개수
+                const totalSlides = slides.length;
+                // 슬라이드 한 개의 너비
+                const slideWidth = slides[0].offsetWidth;
+
+                // 초기 슬라이드 위치 설정
+                track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+                // 이전 버튼 클릭 시
+                prevBtn.addEventListener('click', function () {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+                    }
+                });
+
+                // 다음 버튼 클릭 시
+                nextBtn.addEventListener('click', function () {
+                    if (currentIndex < totalSlides - 1) {
+                        currentIndex++;
+                        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+                    }
+                });
+            });
+
+
+
+
+        </script>
+</body>
+
+</html>

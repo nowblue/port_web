@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <style>
+        .wrap{
+
+            width: 100%;
+            height: 100%;
+        }
+
+        .d_container {
+            background-image: url(../img/intro_2.GIF);
+            flex-wrap: wrap;
+            padding-top: 15vw;
+            padding-bottom: -20vw;
+            background-size: 100%;
+            height: 75%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .d_container div {
+            margin: 0 5vw;
+            text-align: center;
+            position: relative;
+        }
+
+        .appear-1 {
+            opacity: 0;
+            /* appear-1 요소 초기에 숨김 */
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            transform: translateY(20px);
+            font-size: 2.5vw;
+            font-weight: 500;
+            color: #fff;
+            /* appear-1 요소 초기 위치 설정 */
+        }
+
+        .Design-1:hover+.appear-1.p1,
+        .Design-2:hover+.appear-1.p2,
+        .Design-3:hover+.appear-1.p3 {
+            opacity: 1;
+            /* 호버 시 appear-1 요소 보이도록 */
+            transform: translateY(0);
+        }
+
+        .Design-1::after,
+        .Design-2::after,
+        .Design-3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 2vw;
+            width: 100%;
+            height: 0.2vw;
+            background-color: #fff;
+            transform: scaleX(0);
+            /* 초기에는 밑줄 안 보이도록 */
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .Design-1:hover::after,
+        .Design-2:hover::after,
+        .Design-3:hover::after {
+            transform: scaleX(1);
+            /* 호버 시 밑줄 그어지도록 */
+        }
+
+        h3 {
+            font-size: 3vw;
+            font-weight: 600;
+        }
+
+        a{
+            color: rgb(255, 245, 211);
+            text-decoration: none;
+        }
+
+        .Design-1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .Design-2{
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .Design-3{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <nav>
+            <ul>
+                <li><a href="./profile.html" class="nav-li">PROFILE</a></li>
+                <li><a href="./design.html" class="nav-li">DESIGN</a></li>
+                <li><a href="./motion.html" class="nav-li">MOTION</a></li>
+                <li><a href="./draw.html" class="nav-li">DRAW</a></li>
+                <li><a href="./gallery.html" class="nav-li">GALLERY</a></li>
+            </ul>
+
+            <a href="./index.html"><img src="../img/logo.png" alt="" class="logo"></a>
+        </nav>
+
+        <div class="d_container">
+            <div>
+                <p class="appear-1 p1">WEB</p>
+                <a href="./webD.html"><h3 class="Design-1" onmouseover="showParagraph('.p1')">Design</h3></a>
+            </div>
+            <div>
+                <p class="appear-1 p2">LOGO</p>
+                <a href="./logoD.html"><h3 class="Design-2" onmouseover="showParagraph('.p2')">Design</h3></a>
+            </div>
+            <div>
+                <p class="appear-1 p3">PERSONAL</p>
+                <a href="./personal.html"><h3 class="Design-3" onmouseover="showParagraph('.p3')">Design</h3></a>
+            </div>
+        </div>
+
+        <footer>
+            <section class="footer">
+                <section class="footer-left">
+                    <article>
+                        <img src="../img/logo.png" alt="" class="footer-logo">
+                    </article>
+                    <p class="footer-text">
+                        ©Song Haim ALL RIGHTS RESERVED.
+                    </p>
+                </section>
+    
+                <section class="footer-right">
+                    <div class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">GITHUB</p>
+                            <p class="footer-sub2"><a href="https://github.com/nowblue/hr_wp.git">nowblue</a></p>
+                        </div>
+    
+                        <p class="footer-sub3">이용 약관</p>
+                    </div>
+                    <section class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">E-mail</p>
+                            <a href="mailto:season460@kaywon.ac.kr" class="mailto">
+                                <p class="footer-sub2">season460@kaywon.ac.kr</p>
+                            </a>
+                        </div>
+    
+                        <p class="footer-sub3">도움말</p>
+                    </section>
+                    <section class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">SNS</p>
+                            <p class="footer-sub2"><a href="https://blog.naver.com/oo0n_">Blog</a></p>
+                        </div>
+    
+                        <p class="footer-sub3">개인정보 처리방침</p>
+                    </section>
+                </section>
+            </section>
+        </footer>
+    </div>
+
+    <script>
+        function showParagraph(className) {
+            // 모든 appear-1 클래스의 요소를 숨김
+            let appearElements = document.querySelectorAll('.appear-1');
+            appearElements.forEach(function (element) {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+            });
+
+            // 특정 클래스의 요소를 보여줌
+            let targetElement = document.querySelector(className);
+            targetElement.style.opacity = '1';
+            targetElement.style.transform = 'translateY(0)';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <title>Gallery</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <nav>
+            <ul>
+                <li><a href="./profile.html" class="nav-li">PROFILE</a></li>
+                <li><a href="./design.html" class="nav-li">DESIGN</a></li>
+                <li><a href="./motion.html" class="nav-li">MOTION</a></li>
+                <li><a href="./draw.html" class="nav-li">DRAW</a></li>
+                <li><a href="./gallery.html" class="nav-li">GALLERY</a></li>
+            </ul>
+            <a href="./index.html"><img src="../img/logo.png" alt="" class="logo"></a>
+        </nav>
+        <div class="gallery-container">
+            <h1>Gallery</h1>
+            <select name="category" id="category">
+                <option value="phone">Phone</option>
+                <option value="camera">Camera</option>
+            </select>
+            <div class="gallery-grid phone-grid">
+                <div class="gallery-item" onclick="openModal('2024.01.19', 'Austrailia')">
+                    <img src="../img/p1.jpg" alt="Sample Image 1">
+                    <div class="description">우연한 행복</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('2024.04.09', 'Anyang')">
+                    <img src="../img/p2.jpg" alt="Sample Image 3">
+                    <div class="description">봄의 알림창</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('2024.04.14', 'Suwon')">
+                    <img src="../img/p3.jpg" alt="Sample Image 5">
+                    <div class="description">색의 대비감</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('2024.06.01', 'Seoul')">
+                    <img src="../img/p4.jpg" alt="Sample Image 7">
+                    <div class="description">영화 속</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('2023.06.02', 'Suwon')">
+                    <img src="../img/p5.jpg" alt="Sample Image 9">
+                    <div class="description">솔방울 줍기</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('2024.04.02', 'Anyang')">
+                    <img src="../img/p6.jpg" alt="Sample Image 11">
+                    <div class="description">서막</div>
+                </div>
+            </div>
+            <div class="gallery-grid camera-grid">
+                <div class="gallery-item" onclick="openModal('2024.04.09', 'Anyang')">
+                    <img src="../img/c1.jpg" alt="Sample Image 2">
+                    <div class="description">초록빛 산책</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('2024.01.02', 'Osaka')">
+                    <img src="../img/c2.JPG" alt="Sample Image 4">
+                    <div class="description">명암의 미</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('2024.04.09', 'Anyang')">
+                    <img src="../img/c3.JPG" alt="Sample Image 6">
+                    <div class="description">여름 맛보기</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('2024.04.09', 'Anyang')">
+                    <img src="../img/c4.JPG" alt="Sample Image 2">
+                    <div class="description">봄의 놀이터</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('2024.04.09', 'Anyang')">
+                    <img src="../img/c5.JPG" alt="Sample Image 4">
+                    <div class="description">동백.</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('2024.04.09', 'Anyang')">
+                    <img src="../img/c6.jpg" alt="Sample Image 6">
+                    <div class="description">말간 세상</div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- 모달 -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-text">
+                <h2 id="caption"></h2>
+                <p id="location"></p>
+            </div>
+            <button class="modal-arrow left" id="modalArrowLeft">&#9664;</button>
+            <img id="modalImg" src="" alt="Modal Image">
+            <button class="modal-arrow right" id="modalArrowRight">&#9654;</button>
+        </div>
+    </div>
+    </div>
+
+    
+    <footer>
+        <section class="footer">
+            <section class="footer-left">
+                <article>
+                    <img src="../img/logo.png" alt="" class="footer-logo">
+                </article>
+                <p class="footer-text">
+                    ©Song Haim ALL RIGHTS RESERVED.
+                </p>
+            </section>
+
+            <section class="footer-right">
+                <div class="footer-subbox">
+                    <div>
+                        <p class="footer-sub1">GITHUB</p>
+                        <p class="footer-sub2"><a href="https://github.com/nowblue/hr_wp.git">nowblue</a></p>
+                    </div>
+
+                    <p class="footer-sub3">이용 약관</p>
+                </div>
+                <section class="footer-subbox">
+                    <div>
+                        <p class="footer-sub1">E-mail</p>
+                        <a href="mailto:season460@kaywon.ac.kr" class="mailto">
+                            <p class="footer-sub2">season460@kaywon.ac.kr</p>
+                        </a>
+                    </div>
+
+                    <p class="footer-sub3">도움말</p>
+                </section>
+                <section class="footer-subbox">
+                    <div>
+                        <p class="footer-sub1">SNS</p>
+                        <p class="footer-sub2"><a href="https://blog.naver.com/oo0n_">Blog</a></p>
+                    </div>
+
+                    <p class="footer-sub3">개인정보 처리방침</p>
+                </section>
+            </section>
+        </section>
+    </footer>
+    <script src="../js/gallery.js"></script>
+</body>
+
+</html>

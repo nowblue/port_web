@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <title>Document</title>
+    <style>
+        .section1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 8vw;
+    position: relative;
+}
+
+.main_img {
+    width: 35vw;
+    transition: all 0.5s ease; /* 이미지 확대/축소 애니메이션 */
+}
+
+.arrow {
+    position: absolute;
+    margin-top: 35vw;
+    left: 48vw;
+    transform: translateX(-50%);
+}
+
+.arrow a span {
+    position: absolute;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-left: 0.2vw solid rgb(105, 105, 105);
+    border-bottom: 0.2vw solid rgb(105, 105, 105);
+    transform: rotate(-45deg);
+    animation: sdb 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+.arrow a span:nth-of-type(1) {
+    animation-delay: 0s;
+    top: 0;
+}
+
+.arrow a span:nth-of-type(2) {
+    animation-delay: .15s;
+    top: 3vw;
+}
+
+@keyframes sdb {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: 3vw;
+    }
+}
+
+.section2 {
+    background-color: #f3f3f3;
+    padding: 2vw 0;
+    margin-top: 10vw;
+}
+
+.rolling-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 3vw auto;
+    height: 20vw;
+    overflow: hidden;
+}
+
+.rolling-list2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 3vw auto;
+    height: 20vw;
+    overflow: hidden;
+}
+
+.rolling-list ul {
+    position: absolute;
+    display: flex;
+    gap: 0 4vw;
+    width: max-content;
+    animation: aniScroll 30s linear infinite;
+}
+
+.rolling-list2 ul {
+    position: absolute;
+    display: flex;
+    gap: 0 4vw;
+    width: max-content;
+    animation: aniScrollReverse 30s linear infinite;
+}
+
+.rolling-list .list2 {
+    animation: aniScroll-2 30s linear infinite;
+}
+
+.rolling-list2 .list2 {
+    animation: aniScroll-2Reverse 30s linear infinite;
+}
+
+.rolling-list li {
+    list-style: none;
+    width: 20vw;
+    line-height: 6vw;
+    text-align: center;
+    color: #afafaf;
+    border-radius: 10vw;
+    font-size: 3.5vw;
+    font-weight: 700;
+}
+
+.rolling-list2 li {
+    list-style: none;
+    width: 20vw;
+    line-height: 6vw;
+    text-align: center;
+    color: #afafaf;
+    border-radius: 10vw;
+    font-size: 3.5vw;
+    font-weight: 700;
+}
+
+.section2 img {
+    width: 15vw;
+    /* height: 15vw; */
+}
+
+.rolling-list li img,
+.rolling-list2 li img {
+    width: 100%;
+    /* 이미지를 부모 요소의 100% 크기로 설정 */
+    height: 100%;
+    /* 가로세로 비율을 유지하면서 이미지 크기 조정 */
+    object-fit: cover;
+    /* 이미지의 비율 유지하면서 요소에 꽉 채움 */
+    /* border-radius: 10px; 이미지에 원형 모서리를 적용 */
+}
+
+/* 0%에서 -100%으로 이동하는 애니메이션 */
+@keyframes aniScroll {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* 100%에서 0%으로 이동하는 애니메이션 */
+@keyframes aniScroll-2 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* 새로운 애니메이션: 0%에서 100%으로 이동하는 애니메이션 */
+@keyframes aniScrollReverse {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* 새로운 애니메이션: 0%에서 -100%으로 이동하는 애니메이션 */
+@keyframes aniScroll-2Reverse {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* 추가된 CSS */
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* box-shadow: */
+}
+    </style>
+</head>
+
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>Document</title>
+    <style>
+        /* 여기에 CSS 내용을 복사해 넣으세요 */
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <nav>
+            <ul>
+                <li><a href="./profile.html" class="nav-li">PROFILE</a></li>
+                <li><a href="./design.html" class="nav-li">DESIGN</a></li>
+                <li><a href="./motion.html" class="nav-li">MOTION</a></li>
+                <li><a href="" class="nav-li">DRAW</a></li>
+                <li><a href="./gallery.html" class="nav-li">GALLERY</a></li>
+            </ul>
+            <a href="../index.html"><img src="../../img/logo.png" alt="" class="logo"></a>
+        </nav>
+
+        <section class="section1">
+            <img src="../img/3.jpg" alt="" class="main_img">
+        </section>
+
+        <section class="section2">
+            <div class="rolling_banner">
+                <div class="rolling-list">
+                    <ul class="boxes">
+                        <li><a href="./draw/yearpost.html"><img src="../img/1.jpg" alt=""></a></li>
+                        <li><a href="./draw/outfit.html"><img src="../img/2.jpg" alt=""></a></li>
+                        <li><a href="./draw/free.html"><img src="../img/4.jpg" alt=""></a></li>
+                        <li><a href="./draw/free.html"><img src="../img/5.jpg" alt=""></a></li>
+                        <li><a href="./draw/fun.html"><img src="../img/6.jpg" alt=""></a></li>
+                    </ul>
+                    <ul class="boxes list2">
+                        <li><a href="./draw/yearpost.html"><img src="../img/1.jpg" alt=""></a></li>
+                        <li><a href="./draw/outfit.html"><img src="../img/2.jpg" alt=""></a></li>
+                        <li><a href="./draw/free.html"><img src="../img/4.jpg" alt=""></a></li>
+                        <li><a href="./draw/free.html"><img src="../img/5.jpg" alt=""></a></li>
+                        <li><a href="./draw/fun.html"><img src="../img/6.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+
+                <div class="rolling-list2">
+                    <ul class="boxes">
+                        <li><a href="./draw/outfit.html"><img src="../img/7.jpg" alt=""></a></li>
+                        <li><a href="./draw/kurly.html"><img src="../img/8.jpg" alt=""></a></li>
+                        <li><a href="./draw/free.html"><img src="../img/9.jpg" alt=""></a></li>
+                        <li><a href="./draw/outfit.html"><img src="../img/10.jpg" alt=""></a></li>
+                        <li><a href="./draw/cat.html"><img src="../img/11.jpg" alt=""></a></li>
+                    </ul>
+                    <ul class="boxes list2">
+                        <li><a href="./draw/outfit.html"><img src="../img/7.jpg" alt=""></a></li>
+                        <li><a href="./draw/kurly.html"><img src="../img/8.jpg" alt=""></a></li>
+                        <li><a href="./draw/free.html"><img src="../img/9.jpg" alt=""></a></li>
+                        <li><a href="./draw/outfit.html"><img src="../img/10.jpg" alt=""></a></li>
+                        <li><a href="./draw/cat.html"><img src="../img/11.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <section class="footer">
+                <section class="footer-left">
+                    <article>
+                        <img src="../img/logo.png" alt="" class="footer-logo">
+                    </article>
+                    <p class="footer-text">
+                        ©Song Haim ALL RIGHTS RESERVED.
+                    </p>
+                </section>
+    
+                <section class="footer-right">
+                    <div class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">GITHUB</p>
+                            <p class="footer-sub2"><a href="https://github.com/nowblue/hr_wp.git">nowblue</a></p>
+                        </div>
+    
+                        <p class="footer-sub3">이용 약관</p>
+                    </div>
+                    <section class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">E-mail</p>
+                            <a href="mailto:season460@kaywon.ac.kr" class="mailto">
+                                <p class="footer-sub2">season460@kaywon.ac.kr</p>
+                            </a>
+                        </div>
+    
+                        <p class="footer-sub3">도움말</p>
+                    </section>
+                    <section class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">SNS</p>
+                            <p class="footer-sub2"><a href="https://blog.naver.com/oo0n_">Blog</a></p>
+                        </div>
+    
+                        <p class="footer-sub3">개인정보 처리방침</p>
+                    </section>
+                </section>
+            </section>
+        </footer>
+    </div>
+
+</body>
+
+</html>
+
+    <!-- <script src="../js/script.js"></script> -->
+</body>
+
+</html>

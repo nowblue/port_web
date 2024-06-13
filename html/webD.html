@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/WebD.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <title>Section Animation</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./profile.html" class="nav-li">PROFILE</a></li>
+            <li><a href="./design.html" class="nav-li">DESIGN</a></li>
+            <li><a href="./motion.html" class="nav-li">MOTION</a></li>
+            <li><a href="./draw.html" class="nav-li">DRAW</a></li>
+            <li><a href="./gallery.html" class="nav-li">GALLERY</a></li>
+        </ul>
+        <a href="./index.html"><img src="../img/logo.png" alt="" class="logo"></a>
+    </nav>
+    <main>
+        <section class="section-animate">
+            <div class="card">
+                <h1>MARKET KURLY</h1>
+                <img src="../img/kurly_logo.png" alt="" style="width: 30vw;">
+                <p>
+                    좋아하는 브랜드, 마켓컬리로 광고형 포스터를 제작하였습니다.<br/>
+                    또, 그와 비슷한 광고형 영상도 함께 제작하였습니다.
+                </p>
+                <article>
+                <img src="../img/kurly5.jpg" alt="">
+                <p>▲ 비주얼 컨셉 작업물 <br/>
+                    - 새벽배송 브랜드가 많아져도 마켓컬리가 선두주자다!</p>
+                <img src="../img/kurly6.jpg" alt="">
+            </article>
+
+            <h2>Video</h2>
+                <video src="../img/8조_22255040 송하림_22255064 이예원_마켓컬리.mp4" controls></video>
+                <article class="card_section">
+                    <img src="../img/kurly7.png" alt="">
+                    <img src="../img/kurly8.png" alt="">
+                    <img src="../img/kurly9.png" alt="">
+                    <img src="../img/kurly10.png" alt="">
+                    <img src="../img/kurly11.png" alt="">
+
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="footer">
+            <section class="footer-left">
+                <article>
+                    <img src="../img/logo.png" alt="" class="footer-logo">
+                </article>
+                <p class="footer-text">
+                    ©Song Haim ALL RIGHTS RESERVED.
+                </p>
+            </section>
+
+            <section class="footer-right">
+                <div class="footer-subbox">
+                    <div>
+                        <p class="footer-sub1">GITHUB</p>
+                        <p class="footer-sub2"><a href="https://github.com/nowblue/hr_wp.git">nowblue</a></p>
+                    </div>
+
+                    <p class="footer-sub3">이용 약관</p>
+                </div>
+                <section class="footer-subbox">
+                    <div>
+                        <p class="footer-sub1">E-mail</p>
+                        <a href="mailto:season460@kaywon.ac.kr" class="mailto">
+                            <p class="footer-sub2">season460@kaywon.ac.kr</p>
+                        </a>
+                    </div>
+
+                    <p class="footer-sub3">도움말</p>
+                </section>
+                <section class="footer-subbox">
+                    <div>
+                        <p class="footer-sub1">SNS</p>
+                        <p class="footer-sub2"><a href="https://blog.naver.com/oo0n_">Blog</a></p>
+                    </div>
+
+                    <p class="footer-sub3">개인정보 처리방침</p>
+                </section>
+            </section>
+        </section>
+    </footer>
+    <script>
+     document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.section-animate');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Adjust this threshold as needed
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once the animation is triggered
+            }
+        });
+    }, observerOptions);
+
+    observer.observe(section);
+});
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/WebD.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <title>Section Animation</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./profile.html" class="nav-li">PROFILE</a></li>
+            <li><a href="./design.html" class="nav-li">DESIGN</a></li>
+            <li><a href="./motion.html" class="nav-li">MOTION</a></li>
+            <li><a href="./draw.html" class="nav-li">DRAW</a></li>
+            <li><a href="./gallery.html" class="nav-li">GALLERY</a></li>
+        </ul>
+        <a href="./index.html"><img src="../img/logo.png" alt="" class="logo"></a>
+    </nav>
+    <main>
+        <section class="section-animate">
+            <div class="card">
+                <h1>LOGO</h1>
+                <img src="../img/logo_pj.png" alt="" style="width: 30vw;">
+                <p>
+                    사물 3개를 엮어 자신만의 디자인으로 로고 디자인을 진행했습니다.<br/>
+                    
+                </p>
+                <h2>PROCESS</h2>
+                <article>
+                <img src="../img/logo1.jpg" alt="">
+                <div class="object">
+                <img src="../img/logo2.jpg" alt="">
+                <img src="../img/logo3.jpg" alt="">
+                <img src="../img/logo4.jpg" alt="">
+                </div>
+                <p>▲ 물, 필름 , 드릴 <br/>
+                    - 사물을 정하고 형태를 살피면서 디자인을 구상하기 시작했다.</p>
+                </article>
+                    <article class="feedback">
+                    <img src="../img/logo5.jpg" alt="">
+                    <img src="../img/logo6.jpg" alt="">
+                    <img src="../img/logo7.jpg" alt="">
+                    <img src="../img/logo8.jpg" alt="">
+                    <p>▲ 정말 잦고 오랜 피드백으로 
+                        로고 최종 완성!</p>
+                    </article>
+
+
+        </section>
+    </main>
+    <footer>
+        <section class="footer">
+            <section class="footer-left">
+                <article>
+                    <img src="../img/logo.png" alt="" class="footer-logo">
+                </article>
+                <p class="footer-text">
+                    ©Song Haim ALL RIGHTS RESERVED.
+                </p>
+            </section>
+
+            <section class="footer-right">
+                <div class="footer-subbox">
+                    <div>
+                        <p class="footer-sub1">GITHUB</p>
+                        <p class="footer-sub2"><a href="https://github.com/nowblue/hr_wp.git">nowblue</a></p>
+                    </div>
+
+                    <p class="footer-sub3">이용 약관</p>
+                </div>
+                <section class="footer-subbox">
+                    <div>
+                        <p class="footer-sub1">E-mail</p>
+                        <a href="mailto:season460@kaywon.ac.kr" class="mailto">
+                            <p class="footer-sub2">season460@kaywon.ac.kr</p>
+                        </a>
+                    </div>
+
+                    <p class="footer-sub3">도움말</p>
+                </section>
+                <section class="footer-subbox">
+                    <div>
+                        <p class="footer-sub1">SNS</p>
+                        <p class="footer-sub2"><a href="https://blog.naver.com/oo0n_">Blog</a></p>
+                    </div>
+
+                    <p class="footer-sub3">개인정보 처리방침</p>
+                </section>
+            </section>
+        </section>
+    </footer>
+    <script>
+     document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.section-animate');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Adjust this threshold as needed
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once the animation is triggered
+            }
+        });
+    }, observerOptions);
+
+    observer.observe(section);
+});
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <style>
+        main {
+            padding-top: 70px;
+            /* Adjust to give space for the fixed nav */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            display: flex;
+            padding-top: 4vw;
+            width: 80vw;
+            /* height: 200px; */
+            background-color: #ececec;
+            border-radius: 10px;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0 0 0 ;
+            transition: transform 1s ease-out, opacity 1s ease-out;
+            opacity: 0;
+            transform: translateY(200vw);
+        }
+
+        .card img {
+            width: 100px;
+            /* border-radius: 50%; */
+        }
+
+        .card p {
+            margin-top:1vw;
+            margin-bottom: 5vw;
+            font-size: 1vw;
+            font-weight: 700;
+        }
+
+        /* Animation when section comes into view */
+        .section-animate.visible .card {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+         video {
+            width: 60vw;
+            margin-top: 2vw;
+            /* margin-bottom: 5vw; */
+        }
+
+        h1 {
+            font-size: 3vw;
+            margin-bottom: 0.5vw;
+        }
+
+        h2 {
+            margin-bottom: 1.5vw;
+            font-size: 1.3vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <nav>
+            <ul>
+                <li><a href="./profile.html" class="nav-li">PROFILE</a></li>
+                <li><a href="./design.html" class="nav-li">DESIGN</a></li>
+                <li><a href="./motion.html" class="nav-li">MOTION</a></li>
+                <li><a href="./draw.html" class="nav-li">DRAW</a></li>
+                <li><a href="./gallery.html" class="nav-li">GALLERY</a></li>
+            </ul>
+
+            <a href="./index.html"><img src="../img/logo.png" alt="" class="logo"></a>
+        </nav>
+        <main>
+            <section class="section-animate">
+                <section class="card">
+                    <h1>Global Warming</h1>
+                    <h2>공모전 제출작 (w/황민지)</h2>
+                    <video src="../img/earth.mp4" controls></video>
+                    <p >
+                        pisaf 공모전<br/>
+                        지정주제-기후변화) 물고기의 현장체험날
+                    </p>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <section class="footer">
+                <section class="footer-left">
+                    <article>
+                        <img src="../img/logo.png" alt="" class="footer-logo">
+                    </article>
+                    <p class="footer-text">
+                        ©Song Haim ALL RIGHTS RESERVED.
+                    </p>
+                </section>
+    
+                <section class="footer-right">
+                    <div class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">GITHUB</p>
+                            <p class="footer-sub2"><a href="https://github.com/nowblue/hr_wp.git">nowblue</a></p>
+                        </div>
+    
+                        <p class="footer-sub3">이용 약관</p>
+                    </div>
+                    <section class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">E-mail</p>
+                            <a href="mailto:season460@kaywon.ac.kr" class="mailto">
+                                <p class="footer-sub2">season460@kaywon.ac.kr</p>
+                            </a>
+                        </div>
+    
+                        <p class="footer-sub3">도움말</p>
+                    </section>
+                    <section class="footer-subbox">
+                        <div>
+                            <p class="footer-sub1">SNS</p>
+                            <p class="footer-sub2"><a href="https://blog.naver.com/oo0n_">Blog</a></p>
+                        </div>
+    
+                        <p class="footer-sub3">개인정보 처리방침</p>
+                    </section>
+                </section>
+            </section>
+        </footer>
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const section = document.querySelector('.section-animate');
+
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.1 // Adjust this threshold as needed
+                };
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                        }
+                    });
+                }, observerOptions);
+
+                observer.observe(section);
+            });
+
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/WebD.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <title>Section Animation</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="./profile.html" class="nav-li">PROFILE</a></li>
+            <li><a href="./design.html" class="nav-li">DESIGN</a></li>
+            <li><a href="./motion.html" class="nav-li">MOTION</a></li>
+            <li><a href="./draw.html" class="nav-li">DRAW</a></li>
+            <li><a href="./gallery.html" class="nav-li">GALLERY</a></li>
+        </ul>
+        <a href="./index.html"><img src="../img/logo.png" alt="" class="logo"></a>
+    </nav>
+    <main>
+        <section class="section-animate">
+            <div class="card">
+                <h1>PERSONAL</h1>
+                <article class="me">
+                    <img src="../img/me4.jpg" alt="">
+                    <img src="../img/me2.jpg" alt="">
+                </article>
+                <p>
+                    자기 자신을 분석하고 확인하여<br />
+                    각자 가지고 있는 성향을 이용하여<br />
+                    키워드로 이미지를 제작하였습니다.
+                </p>
+                <h2>PROCESS</h2>
+                <article class="ex">
+                    <img src="../img/ex2.jpg" alt="">
+                    <img src="../img/ex4.jpg" alt="">
+                    <img src="../img/ex5.jpg" alt="">
+                    <img src="../img/ex7.jpg" alt="">
+                    <img src="../img/ex8.jpg" alt="">
+                    <img src="../img/ex9.jpg" alt="">
+                    <p>▲ 이미지 스케치 <br />
+                        - 키워드 추출 후 고요, 계획적인 이라는 키워드로 제작 진행.</p>
+                </article>
+            </div>
+
+
+
+
+
+        </section>
+    </main>
+    <footer>
+        <section class="footer">
+            <section class="footer-left">
+                <article>
+                    <img src="../img/logo.png" alt="" class="footer-logo">
+                </article>
+                <p class="footer-text">
+                    ©Song Haim ALL RIGHTS RESERVED.
+                </p>
+            </section>
+
+            <section class="footer-right">
+                <div class="footer-subbox">
+                    <div>
+                        <p class="footer-sub1">GITHUB</p>
+                        <p class="footer-sub2"><a href="https://github.com/nowblue/hr_wp.git">nowblue</a></p>
+                    </div>
+
+                    <p class="footer-sub3">이용 약관</p>
+                </div>
+                <section class="footer-subbox">
+                    <div>
+                        <p class="footer-sub1">E-mail</p>
+                        <a href="mailto:season460@kaywon.ac.kr" class="mailto">
+                            <p class="footer-sub2">season460@kaywon.ac.kr</p>
+                        </a>
+                    </div>
+
+                    <p class="footer-sub3">도움말</p>
+                </section>
+                <section class="footer-subbox">
+                    <div>
+                        <p class="footer-sub1">SNS</p>
+                        <p class="footer-sub2"><a href="https://blog.naver.com/oo0n_">Blog</a></p>
+                    </div>
+
+                    <p class="footer-sub3">개인정보 처리방침</p>
+                </section>
+            </section>
+        </section>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const section = document.querySelector('.section-animate');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 // Adjust this threshold as needed
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                    }
+                });
+            }, observerOptions);
+
+            observer.observe(section);
+        });
+
+
+    </script>
+</body>
+
+</html>
