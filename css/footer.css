@@ -1,0 +1,82 @@
+.footer{
+    padding: 2vw 3vw 2vw 5vw;
+    /* height: 30vw; */
+    background: rgb(239, 239, 239);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.footer-left{
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 10vw;
+}
+
+
+.footer-logo{
+    width: 5vw;
+}
+
+.footer-title{
+    font-size: 2vw;
+    font-weight: 500;
+    color: rgb(71, 71, 71);
+}
+
+.footer-text{
+    /* margin-top: 7vw; */
+    font-size: 0.8vw;
+    font-weight: 300;
+    color: #9d9d9d;
+}
+
+.footer-right{
+    margin-right: 2vw;
+    display: inline-flex;
+}
+
+footer a{
+    text-decoration: none;
+    color: #9d9d9d;
+    font-weight: 300;
+
+}
+
+.mailto{
+    text-decoration: none;
+    font-size: 0.8vw;
+}
+.footer-subbox{
+    margin: 0 3vw;
+    height: 10vw;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-subbox2{
+    margin: 0 3vw;
+}
+
+.footer-sub1{
+    font-size: 1.1vw;
+    font-weight: 400;
+    color: rgb(71, 71, 71);
+}
+
+.footer-sub2 a{
+    text-decoration: none;
+    margin-top: 0.3vw;
+    font-size: 0.9vw;
+    font-weight: 300;
+    color: #9d9d9d;
+}
+
+.footer-sub3{
+    font-size: 1vw;
+    font-weight: 300;
+    color: rgb(71, 71, 71);
+}

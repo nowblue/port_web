@@ -1,0 +1,92 @@
+main {
+    padding-top: 70px; /* Adjust to give space for the fixed nav */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    width: 60vw;
+    padding: 5vw 0 0 0;
+    /* height: 200vh; */
+    background-color: #ececec;
+    border-radius: 10px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 0 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    opacity: 0;
+    transform: translateY(30vw);
+}
+
+.card img {
+    width: 40vw;
+    margin-top: 3vw
+    /* border-radius: 50%; */
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+video{
+    width: 50vw;
+}
+
+/* Animation when section comes into view */
+.section-animate.visible .card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card_section img{
+    width: 10vw;
+    margin-bottom: 5vw;
+}
+
+h1{
+    font-size: 2.5vw;
+    /* font-weight: 700; */
+}
+
+h2{
+    margin-top: 8vw;
+    font-size: 2vw;
+}
+
+.object img{
+    width: 18vw;
+}
+
+.feedback{
+    margin: 5vw 0;
+}
+
+.feedback img{
+    width: 25vw;
+    /* margin-bottom: -2vw; */
+    margin: 0vw;
+}
+
+.me img{
+    width: 25vw;
+    margin: 1vw;
+}
+.ex{
+    margin: 2vw 0;
+}
+
+.ex img{
+    width: 18vw;
+    margin: 0;
+}
+
+p{
+    line-height: 1.3vw;
+}

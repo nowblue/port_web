@@ -1,0 +1,143 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.banner_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.vertical_banner {
+    overflow: hidden;
+    width: 18vw;
+    height: 200vw;
+    background: #fff;
+    border-radius: 1.04vw;
+    position: relative;
+}
+
+.vertical_banner .list>li {
+    overflow: hidden;
+    padding: 7vw 0;
+    margin: 7vw 0;
+    font-size: 2vw;
+    color: #000;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@keyframes verticalRolling {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+nav {
+    display: flex;
+    position: fixed;
+    background: #fff;
+    padding: 1vh;
+    align-items: center;
+    z-index: 1;
+    width: -webkit-fill-available;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    gap:3vw;
+    margin-left: 2vw;
+}
+
+nav ul .nav-li {
+    font-size: 1vw;
+    font-weight: 500;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+}
+
+main {
+    z-index: 2;
+    padding-top: 20vw; /* section1의 높이에 맞춰 조정 */
+}
+
+.section1 {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 25vw;
+}
+
+.bg {
+    position: absolute;
+    width: 50vw;
+    transition: transform 0.3s ease;
+}
+
+.bg-logo {
+    width: 15vw;
+    position: absolute;
+    top: 18vw;
+}
+
+.logo {
+    width: 5vw;
+    margin-left: 14vw;
+}
+
+.section2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 텍스트 가운데 정렬을 위해 추가 */
+    min-height: 100vh; /* 최소 높이 지정 */
+    /* background-image: url('./img/bg.png'); */
+    background-color: rgb(239, 239, 239);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed; /* 배경 고정 설정 */
+    color: #000;
+    /* margin-bottom: 0; */
+}
+
+.text_2 {
+    font-size: 5vw;
+    font-weight: 600;
+    text-align: center;
+}
+
+span {
+    content: "\2192";
+    transform: scale(22.5);
+    position: relative;
+    top: 15vw;
+    right: 6vw;
+  }

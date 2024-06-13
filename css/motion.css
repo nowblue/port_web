@@ -1,0 +1,30 @@
+
+main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-top: 10vw;
+}
+
+main a{
+    text-decoration: none;
+    color: black;
+    font-size: 6vw;
+    font-weight: 900;
+    font-family: "Averia Serif Libre", serif;
+}
+
+main a:hover{
+    /* color: #fff; */
+    border: 0.2vw solid #000;
+}
+
+main p{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 6vw;
+    line-height: 8vw;
+    margin: -0;
+}
